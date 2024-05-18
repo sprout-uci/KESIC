@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IoT Server</title>
+</head>
+<body>
+    <h1>Welcome to IoT Server</h1>
+    {% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+    {% endif %}
+    <form method="post">
+        <label for="user_name">User Name</label>
+        <br>
+        <input type="text" name="user_name"
+               value="{{ request.form['user_name'] }}" required></input>
+        <br>
+        <label for="device_name">Device Name</label>
+        <br>
+        <input type="text" name="device_name"
+               value="{{ request.form['device_name'] }}" required></input>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

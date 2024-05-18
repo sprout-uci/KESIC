@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Command</title>
+</head>
+<body>
+    <h3>{{ message }}</h3>
+<form method="post">
+        <label for="command">Command to the device</label>
+        <br>
+        <input type="text" name="command"
+               value="{{ request.form['command'] }}"></input>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
